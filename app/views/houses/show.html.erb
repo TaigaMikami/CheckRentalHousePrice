@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Room type:</strong>
+  <%= @house.room_type %>
+</p>
+
+<p>
+  <strong>Num rooms:</strong>
+  <%= @house.num_rooms %>
+</p>
+
+<p>
+  <strong>Square:</strong>
+  <%= @house.square %>
+</p>
+
+<p>
+  <strong>Floor:</strong>
+  <%= @house.floor %>
+</p>
+
+<p>
+  <strong>Building type:</strong>
+  <%= @house.building_type %>
+</p>
+
+<p>
+  <strong>Structure type:</strong>
+  <%= @house.structure_type %>
+</p>
+
+<p>
+  <strong>Floor height:</strong>
+  <%= @house.floor_height %>
+</p>
+
+<p>
+  <strong>result:</strong>
+  <%= @result %>
+</p>
+
+<%= link_to 'Edit', edit_house_path(@house) %> |
+<%= link_to 'Back', houses_path %>

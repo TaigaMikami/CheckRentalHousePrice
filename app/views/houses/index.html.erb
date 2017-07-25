@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Houses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Room type(部屋のタイプ)</th>
+      <th>Num rooms(部屋の数)</th>
+      <th>Square(広さ)</th>
+      <th>Floor(階数)</th>
+      <th>Building type(建物タイプ)</th>
+      <th>Structure type(構造タイプ)</th>
+      <th>Floor height(高さ)</th>
+      <th>result(お値段)</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @houses.each do |house| %>
+      <tr>
+        <td><%= house.room_type %></td>
+        <td><%= house.num_rooms %></td>
+        <td><%= house.square %></td>
+        <td><%= house.floor %></td>
+        <td><%= house.building_type %></td>
+        <td><%= house.structure_type %></td>
+        <td><%= house.floor_height %></td>
+        <td><%= house.result %></td>
+        <td><%= link_to 'Show', house %></td>
+        <td><%= link_to 'Edit', edit_house_path(house) %></td>
+        <td><%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New House', new_house_path %>

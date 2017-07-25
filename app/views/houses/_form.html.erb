@@ -1,0 +1,52 @@
+<%= form_for(house) do |f| %>
+  <% if house.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(house.errors.count, "error") %> prohibited this house from being saved:</h2>
+
+      <ul>
+      <% house.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :room_type %>
+    <%= f.text_field :room_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :num_rooms %>
+    <%= f.text_field :num_rooms %>
+  </div>
+
+  <div class="field">
+    <%= f.label :square %>
+    <%= f.text_field :square %>
+  </div>
+
+  <div class="field">
+    <%= f.label :floor %>
+    <%= f.text_field :floor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :building_type %>
+    <%= f.text_field :building_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :structure_type %>
+    <%= f.text_field :structure_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :floor_height %>
+    <%= f.text_field :floor_height %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
